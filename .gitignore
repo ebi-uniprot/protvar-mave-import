@@ -1,0 +1,22 @@
+# Full dataset — too large for the repo
+data/mave/
+
+# Allow main.json (tracked via LFS)
+!data/main.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environment / secrets
+.env
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
