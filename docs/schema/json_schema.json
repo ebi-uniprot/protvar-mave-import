@@ -1,0 +1,1309 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "asOf": {
+      "type": "string"
+    },
+    "experimentSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "urn": {
+            "type": "string"
+          },
+          "publishedDate": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "recordType": {
+            "type": "string"
+          },
+          "experiments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "shortDescription": {
+                  "type": "string"
+                },
+                "abstractText": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "methodText": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "extraMetadata": {
+                  "type": "object",
+                  "properties": {
+                    "library_ID": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "recordType": {
+                  "type": "string"
+                },
+                "urn": {
+                  "type": "string"
+                },
+                "createdBy": {
+                  "type": "object",
+                  "properties": {
+                    "orcidId": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "recordType": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "firstName",
+                    "lastName",
+                    "orcidId",
+                    "recordType"
+                  ]
+                },
+                "modifiedBy": {
+                  "type": "object",
+                  "properties": {
+                    "orcidId": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "recordType": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "firstName",
+                    "lastName",
+                    "orcidId",
+                    "recordType"
+                  ]
+                },
+                "creationDate": {
+                  "type": "string"
+                },
+                "modificationDate": {
+                  "type": "string"
+                },
+                "publishedDate": {
+                  "type": "string"
+                },
+                "experimentSetUrn": {
+                  "type": "string"
+                },
+                "doiIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "identifier",
+                      "recordType",
+                      "url"
+                    ]
+                  }
+                },
+                "primaryPublicationIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "dbName": {
+                        "type": "string"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "authors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "primary": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "primary"
+                          ]
+                        }
+                      },
+                      "abstract": {
+                        "type": "string"
+                      },
+                      "doi": {
+                        "type": "string"
+                      },
+                      "publicationYear": {
+                        "type": "integer"
+                      },
+                      "publicationJournal": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "referenceHtml": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "abstract",
+                      "authors",
+                      "dbName",
+                      "doi",
+                      "id",
+                      "identifier",
+                      "publicationJournal",
+                      "publicationYear",
+                      "recordType",
+                      "referenceHtml",
+                      "title",
+                      "url"
+                    ]
+                  }
+                },
+                "secondaryPublicationIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "dbName": {
+                        "type": "string"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "authors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "primary": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "primary"
+                          ]
+                        }
+                      },
+                      "abstract": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "doi": {
+                        "type": "string"
+                      },
+                      "publicationYear": {
+                        "type": "integer"
+                      },
+                      "publicationJournal": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "referenceHtml": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "abstract",
+                      "authors",
+                      "dbName",
+                      "doi",
+                      "id",
+                      "identifier",
+                      "publicationJournal",
+                      "publicationYear",
+                      "recordType",
+                      "referenceHtml",
+                      "title",
+                      "url"
+                    ]
+                  }
+                },
+                "rawReadIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "identifier",
+                      "recordType",
+                      "url"
+                    ]
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "orcidId": {
+                        "type": "string"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "givenName": {
+                        "type": "string"
+                      },
+                      "familyName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "familyName",
+                      "givenName",
+                      "orcidId",
+                      "recordType"
+                    ]
+                  }
+                },
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "keyword": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "string"
+                          },
+                          "vocabulary": {
+                            "type": "null"
+                          },
+                          "special": {
+                            "type": "boolean"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "description",
+                          "key",
+                          "special",
+                          "value",
+                          "vocabulary"
+                        ]
+                      },
+                      "description": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "recordType": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "description",
+                      "keyword",
+                      "recordType"
+                    ]
+                  }
+                },
+                "scoreSets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "methodText": {
+                        "type": "string"
+                      },
+                      "abstractText": {
+                        "type": "string"
+                      },
+                      "shortDescription": {
+                        "type": "string"
+                      },
+                      "extraMetadata": {
+                        "type": "object",
+                        "properties": {
+                          "chr": {
+                            "type": "string"
+                          },
+                          "end": {
+                            "type": "integer"
+                          },
+                          "start": {
+                            "type": "integer"
+                          },
+                          "reference": {
+                            "type": "string"
+                          },
+                          "abundance_codes": {
+                            "type": "object",
+                            "properties": {
+                              "low": {
+                                "type": "integer"
+                              },
+                              "wt-like": {
+                                "type": "integer"
+                              },
+                              "possibly_low": {
+                                "type": "integer"
+                              },
+                              "possibly_wt-like": {
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "low",
+                              "possibly_low",
+                              "possibly_wt-like",
+                              "wt-like"
+                            ]
+                          },
+                          "library_ID": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "dataUsagePolicy": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "urn": {
+                        "type": "string"
+                      },
+                      "numVariants": {
+                        "type": "integer"
+                      },
+                      "license": {
+                        "type": "object",
+                        "properties": {
+                          "longName": {
+                            "type": "string"
+                          },
+                          "shortName": {
+                            "type": "string"
+                          },
+                          "active": {
+                            "type": "boolean"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "integer"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "active",
+                          "id",
+                          "link",
+                          "longName",
+                          "recordType",
+                          "shortName",
+                          "version"
+                        ]
+                      },
+                      "supersededScoreSet": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "urn": {
+                                "type": "string"
+                              },
+                              "recordType": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "recordType",
+                              "urn"
+                            ]
+                          }
+                        ]
+                      },
+                      "supersedingScoreSet": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "urn": {
+                                "type": "string"
+                              },
+                              "recordType": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "recordType",
+                              "urn"
+                            ]
+                          }
+                        ]
+                      },
+                      "metaAnalyzesScoreSetUrns": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "metaAnalyzedByScoreSetUrns": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "doiIdentifiers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "identifier",
+                            "recordType",
+                            "url"
+                          ]
+                        }
+                      },
+                      "primaryPublicationIdentifiers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "dbName": {
+                              "type": "string"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "authors": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "primary": {
+                                    "type": "boolean"
+                                  }
+                                },
+                                "required": [
+                                  "name",
+                                  "primary"
+                                ]
+                              }
+                            },
+                            "abstract": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "doi": {
+                              "type": "string"
+                            },
+                            "publicationYear": {
+                              "type": "integer"
+                            },
+                            "publicationJournal": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "referenceHtml": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "abstract",
+                            "authors",
+                            "dbName",
+                            "doi",
+                            "id",
+                            "identifier",
+                            "publicationJournal",
+                            "publicationYear",
+                            "recordType",
+                            "referenceHtml",
+                            "title",
+                            "url"
+                          ]
+                        }
+                      },
+                      "secondaryPublicationIdentifiers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "dbName": {
+                              "type": "string"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "authors": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "primary": {
+                                    "type": "boolean"
+                                  }
+                                },
+                                "required": [
+                                  "name",
+                                  "primary"
+                                ]
+                              }
+                            },
+                            "abstract": {
+                              "type": "string"
+                            },
+                            "doi": {
+                              "type": "string"
+                            },
+                            "publicationYear": {
+                              "type": "integer"
+                            },
+                            "publicationJournal": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "referenceHtml": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "abstract",
+                            "authors",
+                            "dbName",
+                            "doi",
+                            "id",
+                            "identifier",
+                            "publicationJournal",
+                            "publicationYear",
+                            "recordType",
+                            "referenceHtml",
+                            "title",
+                            "url"
+                          ]
+                        }
+                      },
+                      "publishedDate": {
+                        "type": "string"
+                      },
+                      "creationDate": {
+                        "type": "string"
+                      },
+                      "modificationDate": {
+                        "type": "string"
+                      },
+                      "createdBy": {
+                        "type": "object",
+                        "properties": {
+                          "orcidId": {
+                            "type": "string"
+                          },
+                          "firstName": {
+                            "type": "string"
+                          },
+                          "lastName": {
+                            "type": "string"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "firstName",
+                          "lastName",
+                          "orcidId",
+                          "recordType"
+                        ]
+                      },
+                      "modifiedBy": {
+                        "type": "object",
+                        "properties": {
+                          "orcidId": {
+                            "type": "string"
+                          },
+                          "firstName": {
+                            "type": "string"
+                          },
+                          "lastName": {
+                            "type": "string"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "firstName",
+                          "lastName",
+                          "orcidId",
+                          "recordType"
+                        ]
+                      },
+                      "targetGenes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "category": {
+                              "type": "string"
+                            },
+                            "externalIdentifiers": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "object",
+                                    "properties": {
+                                      "dbName": {
+                                        "type": "string"
+                                      },
+                                      "identifier": {
+                                        "type": "string"
+                                      },
+                                      "recordType": {
+                                        "type": "string"
+                                      },
+                                      "dbVersion": {
+                                        "type": "null"
+                                      },
+                                      "url": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      },
+                                      "referenceHtml": {
+                                        "type": "null"
+                                      }
+                                    },
+                                    "required": [
+                                      "dbName",
+                                      "dbVersion",
+                                      "identifier",
+                                      "recordType",
+                                      "referenceHtml",
+                                      "url"
+                                    ]
+                                  },
+                                  "offset": {
+                                    "type": "integer"
+                                  },
+                                  "recordType": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "identifier",
+                                  "offset",
+                                  "recordType"
+                                ]
+                              }
+                            },
+                            "id": {
+                              "type": "integer"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "targetSequence": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "sequenceType": {
+                                      "type": "string"
+                                    },
+                                    "sequence": {
+                                      "type": "string"
+                                    },
+                                    "label": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "recordType": {
+                                      "type": "string"
+                                    },
+                                    "taxonomy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "taxId": {
+                                          "type": "integer"
+                                        },
+                                        "organismName": {
+                                          "type": "string"
+                                        },
+                                        "commonName": {
+                                          "type": "string"
+                                        },
+                                        "rank": {
+                                          "type": "string"
+                                        },
+                                        "hasDescribedSpeciesName": {
+                                          "type": "boolean"
+                                        },
+                                        "articleReference": {
+                                          "type": "string"
+                                        },
+                                        "genomeId": {
+                                          "type": "null"
+                                        },
+                                        "id": {
+                                          "type": "integer"
+                                        },
+                                        "recordType": {
+                                          "type": "string"
+                                        },
+                                        "url": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "articleReference",
+                                        "commonName",
+                                        "genomeId",
+                                        "hasDescribedSpeciesName",
+                                        "id",
+                                        "organismName",
+                                        "rank",
+                                        "recordType",
+                                        "taxId",
+                                        "url"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "label",
+                                    "recordType",
+                                    "sequence",
+                                    "sequenceType",
+                                    "taxonomy"
+                                  ]
+                                }
+                              ]
+                            },
+                            "targetAccession": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "accession": {
+                                      "type": "string"
+                                    },
+                                    "assembly": {
+                                      "type": "string"
+                                    },
+                                    "gene": {
+                                      "type": "string"
+                                    },
+                                    "recordType": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "accession",
+                                    "assembly",
+                                    "gene",
+                                    "recordType"
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "category",
+                            "externalIdentifiers",
+                            "id",
+                            "name",
+                            "recordType",
+                            "targetAccession",
+                            "targetSequence"
+                          ]
+                        }
+                      },
+                      "datasetColumns": {
+                        "type": "object",
+                        "properties": {
+                          "countColumns": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "scoreColumns": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "required": [
+                          "countColumns",
+                          "scoreColumns"
+                        ]
+                      },
+                      "externalLinks": {
+                        "type": "object",
+                        "properties": {
+                          "ucscGenomeBrowser": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          }
+                        }
+                      },
+                      "contributors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "orcidId": {
+                              "type": "string"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "givenName": {
+                              "type": "string"
+                            },
+                            "familyName": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "familyName",
+                            "givenName",
+                            "orcidId",
+                            "recordType"
+                          ]
+                        }
+                      },
+                      "scoreRanges": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "wtScore": {
+                                "type": "number"
+                              },
+                              "ranges": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "label": {
+                                      "type": "string"
+                                    },
+                                    "description": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "classification": {
+                                      "type": "string"
+                                    },
+                                    "range": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": [
+                                          "null",
+                                          "number"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "required": [
+                                    "classification",
+                                    "description",
+                                    "label",
+                                    "range"
+                                  ]
+                                }
+                              }
+                            },
+                            "required": [
+                              "ranges",
+                              "wtScore"
+                            ]
+                          }
+                        ]
+                      },
+                      "scoreCalibrations": {
+                        "type": "null"
+                      },
+                      "private": {
+                        "type": "boolean"
+                      },
+                      "processingState": {
+                        "type": "string"
+                      },
+                      "processingErrors": {
+                        "type": "null"
+                      },
+                      "mappingState": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "mappingErrors": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "error_message": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "error_message"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "abstractText",
+                      "contributors",
+                      "createdBy",
+                      "creationDate",
+                      "dataUsagePolicy",
+                      "datasetColumns",
+                      "doiIdentifiers",
+                      "externalLinks",
+                      "extraMetadata",
+                      "license",
+                      "mappingErrors",
+                      "mappingState",
+                      "metaAnalyzedByScoreSetUrns",
+                      "metaAnalyzesScoreSetUrns",
+                      "methodText",
+                      "modificationDate",
+                      "modifiedBy",
+                      "numVariants",
+                      "primaryPublicationIdentifiers",
+                      "private",
+                      "processingErrors",
+                      "processingState",
+                      "publishedDate",
+                      "recordType",
+                      "scoreCalibrations",
+                      "scoreRanges",
+                      "secondaryPublicationIdentifiers",
+                      "shortDescription",
+                      "supersededScoreSet",
+                      "supersedingScoreSet",
+                      "targetGenes",
+                      "title",
+                      "urn"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "abstractText",
+                "contributors",
+                "createdBy",
+                "creationDate",
+                "doiIdentifiers",
+                "experimentSetUrn",
+                "extraMetadata",
+                "keywords",
+                "methodText",
+                "modificationDate",
+                "modifiedBy",
+                "primaryPublicationIdentifiers",
+                "publishedDate",
+                "rawReadIdentifiers",
+                "recordType",
+                "scoreSets",
+                "secondaryPublicationIdentifiers",
+                "shortDescription",
+                "title",
+                "urn"
+              ]
+            }
+          },
+          "createdBy": {
+            "type": "object",
+            "properties": {
+              "orcidId": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "recordType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "firstName",
+              "lastName",
+              "orcidId",
+              "recordType"
+            ]
+          },
+          "modifiedBy": {
+            "type": "object",
+            "properties": {
+              "orcidId": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "recordType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "firstName",
+              "lastName",
+              "orcidId",
+              "recordType"
+            ]
+          },
+          "creationDate": {
+            "type": "string"
+          },
+          "modificationDate": {
+            "type": "string"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "orcidId": {
+                  "type": "string"
+                },
+                "recordType": {
+                  "type": "string"
+                },
+                "givenName": {
+                  "type": "string"
+                },
+                "familyName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "familyName",
+                "givenName",
+                "orcidId",
+                "recordType"
+              ]
+            }
+          }
+        },
+        "required": [
+          "contributors",
+          "createdBy",
+          "creationDate",
+          "experiments",
+          "id",
+          "modificationDate",
+          "modifiedBy",
+          "publishedDate",
+          "recordType",
+          "urn"
+        ]
+      }
+    }
+  },
+  "required": [
+    "asOf",
+    "experimentSets",
+    "title"
+  ]
+}
