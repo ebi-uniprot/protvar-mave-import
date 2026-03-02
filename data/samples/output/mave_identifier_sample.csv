@@ -1,0 +1,33 @@
+urn,numVariants,Gene,GeneCategory,GeneTaxId,UniProt,UniProtOffset,RefSeq,RefSeqOffset,Ensembl,EnsemblOffset
+urn:mavedb:00000001-a-4,10438,UBE2I,protein_coding,9606,P63279,0,NM_003345,159,ENSG00000103275,0
+urn:mavedb:00000001-a-2,3418,UBE2I,protein_coding,9606,P63279,0,NM_003345,159,ENSG00000103275,0
+urn:mavedb:00000001-a-3,7390,UBE2I,protein_coding,9606,P63279,0,NM_003345,159,ENSG00000103275,0
+urn:mavedb:00000001-a-1,3180,UBE2I,protein_coding,9606,P63279,0,NM_003345,159,ENSG00000103275,0
+urn:mavedb:00000001-b-1,2020,SUMO1,protein_coding,9606,P63165,0,NM_001005781.1,149,ENSG00000116030,0
+urn:mavedb:00000001-b-2,4698,SUMO1,protein_coding,9606,P63165,0,NM_001005781.1,149,ENSG00000116030,0
+urn:mavedb:00000001-c-1,5957,CALM1,protein_coding,9606,P0DP23,0,NM_001363670.1,833,ENSG00000198668,0
+urn:mavedb:00000001-c-2,2980,CALM1,protein_coding,9606,P0DP23,0,NM_001363670.1,833,ENSG00000198668,0
+urn:mavedb:00000001-d-1,9542,TPK1,protein_coding,9606,Q9H3S4,0,NM_022445.3,104,ENSG00000196511,0
+urn:mavedb:00000001-d-2,4860,TPK1,protein_coding,9606,Q9H3S4,0,NM_022445.3,104,ENSG00000196511,0
+urn:mavedb:00000002-a-2,30487,hYAP65 WW domain,protein_coding,9606,P46937,169,,,,
+urn:mavedb:00000002-a-1,48183,hYAP65 WW domain,protein_coding,9606,P46937,169,,,,
+urn:mavedb:00000003-b-1,20724,BRCA1 RING domain,protein_coding,9606,,,,,,
+urn:mavedb:00000003-b-2,12316,BRCA1 RING domain,protein_coding,9606,,,,,,
+urn:mavedb:00000003-a-1,20724,BRCA1 RING domain,protein_coding,9606,,,,,,
+urn:mavedb:00000003-a-2,12316,BRCA1 RING domain,protein_coding,9606,,,,,,
+urn:mavedb:00000004-a-3,96991,E4B,protein_coding,10090,Q9ES00,1071,NM_022022.3,3939,,
+urn:mavedb:00000004-a-1,98298,E4B,protein_coding,10090,Q9ES00,1071,NM_022022.3,3939,,
+urn:mavedb:00000004-a-2,158939,E4B,protein_coding,10090,Q9ES00,1071,NM_022022.3,3939,,
+urn:mavedb:00000005-a-5,11478,CBS,protein_coding,9606,P35520,0,,,ENSG00000160200,0
+urn:mavedb:00000005-a-2,11243,CBS,protein_coding,9606,P35520,0,,,ENSG00000160200,0
+urn:mavedb:00000005-a-4,11550,CBS,protein_coding,9606,P35520,0,,,ENSG00000160200,0
+urn:mavedb:00000005-a-6,10802,CBS,protein_coding,9606,P35520,0,,,ENSG00000160200,0
+urn:mavedb:00000005-a-1,11263,CBS,protein_coding,9606,P35520,0,,,ENSG00000160200,0
+urn:mavedb:00000005-a-3,11550,CBS,protein_coding,9606,P35520,0,,,ENSG00000160200,0
+urn:mavedb:00000006-a-1,777,ALDOB enhancer,regulatory,9606,,,,,,
+urn:mavedb:00000007-a-1,1860,ECR11 enhancer,regulatory,9606,,,,,,
+urn:mavedb:00000008-a-2,906,LTV1 enhancer,regulatory,10090,,,,,,
+urn:mavedb:00000008-a-1,906,LTV1 enhancer,regulatory,10090,,,,,,
+urn:mavedb:00000009-a-1,125032,SUL1 promoter,regulatory,559292,,,,,,
+urn:mavedb:00000009-a-2,116242,SUL1 promoter,regulatory,559292,,,,,,
+urn:mavedb:00000010-a-1,40852,PAB1,protein_coding,559292,P04147,125,,,,

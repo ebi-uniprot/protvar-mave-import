@@ -1,5 +1,7 @@
+import argparse
 import json
 import csv
+import os
 from collections import defaultdict
 
 """
@@ -41,7 +43,10 @@ def extract_score_set_data(json_path, output_csv):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    experiment_sets = data.get("experimentSets", [])
+    # main.json is a full export object {"experimentSets": [...], ...};
+    # sample files (e.g. first_10.json) are bare lists produced by jq slice:
+    #   jq '.experimentSets[:10]' main.json > first_10.json
+    experiment_sets = data if isinstance(data, list) else data.get("experimentSets", [])
     extracted_rows = []
 
     # Summary counters
@@ -130,6 +135,7 @@ def extract_score_set_data(json_path, output_csv):
                     extracted_rows.append(row)
 
     # Write to CSV
+    os.makedirs(os.path.dirname(output_csv), exist_ok=True)
     with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=[
             #"recordType",
@@ -152,4 +158,20 @@ def extract_score_set_data(json_path, output_csv):
     print(f"  With gene name: {with_gene_name}")
     print(f"  With UniProt: {with_uniprot}")
 
-extract_score_set_data('data/main.json', 'mave_identifier.csv')
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(
+        description="Extract score set metadata from a MaveDB JSON export."
+    )
+    parser.add_argument(
+        "--input",
+        default="data/samples/first_10.json",
+        help="Path to the MaveDB JSON file (default: data/samples/first_10.json)"
+    )
+    parser.add_argument(
+        "--output",
+        default="data/samples/output/mave_identifier_sample.csv",
+        help="Path for the output CSV file (default: data/samples/output/mave_identifier_sample.csv)"
+    )
+    args = parser.parse_args()
+    extract_score_set_data(args.input, args.output)

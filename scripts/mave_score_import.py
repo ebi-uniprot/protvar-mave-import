@@ -1,3 +1,4 @@
+import argparse
 import os
 import sys
 import csv
@@ -76,6 +77,7 @@ def import_scores_streaming(csv_folder, output_file):
     scheme_counter = Counter()
     simple_complex_counter = Counter()
 
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w', newline='', encoding='utf-8') as out_csv:
         writer = csv.DictWriter(out_csv, fieldnames=header)
         writer.writeheader()
@@ -141,21 +143,27 @@ def import_scores_streaming(csv_folder, output_file):
         for category, count in simple_complex_counter.items():
             print(f"  {category}: {count}")
 
-# Resolve CSV input path from $PV environment variable
-pv_base = os.environ.get("PV")
-if pv_base is None:
-    print("Error: Environment variable $PV is not set.")
-    sys.exit(1)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Extract variant scores from MaveDB score CSV files."
+    )
+    parser.add_argument(
+        "--input",
+        default="data/samples/csv/",
+        help="Path to the folder containing *.scores.csv files (default: data/samples/csv/)"
+    )
+    parser.add_argument(
+        "--output",
+        default="data/samples/output/mave_score_sample.csv",
+        help="Path for the output CSV file (default: data/samples/output/mave_score_sample.csv)"
+    )
+    args = parser.parse_args()
 
-csv_path = os.path.join(pv_base, "data", "mave", "csv")
+    if not os.path.exists(args.input):
+        print(f"Error: Input folder does not exist: {args.input}")
+        sys.exit(1)
 
-# Check if the input folder exists before calling the function
-if not os.path.exists(csv_path):
-    print(f"Error: Input folder does not exist: {csv_path}")
-    sys.exit(1)
-
-# Proceed with importing
-import_scores_streaming(csv_path, "mave_score.csv")
+    import_scores_streaming(args.input, args.output)
 
 # Last run 03/10/2025; SQL import check in pg_import script
 """ 
