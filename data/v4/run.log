@@ -1,0 +1,31 @@
+Extracted 2790 score sets to data/v4/output/mave_identifier.csv
+
+Summary:
+  Human sets (taxId=9606): 1226
+  Non-human sets: 1564
+  Protein-coding sets: 2745
+  With RefSeq: 39
+  With Ensembl
+     ENSG: 46
+     ENSP: 56
+     ENST: 2
+  With gene name: 2790
+  With UniProt: 1753
+Finished streaming 2734 files into data/v4/output/mave_score.csv
+
+Total rows processed: 7704038
+HGVS scheme breakdown in hgvs_pro:
+  p.: 7213717
+  unknown: 490321
+
+'p.' scheme breakdown:
+  complex: 3266545
+  simple: 3947172
+psql:sql/create_tables.sql:20: NOTICE:  relation "mave_identifier_v4" already exists, skipping
+CREATE TABLE
+psql:sql/create_tables.sql:34: NOTICE:  relation "mave_score_v4" already exists, skipping
+CREATE TABLE
+TRUNCATE TABLE
+COPY 2790
+COPY 7704038
+done: mave_identifier_v4 / mave_score_v4
