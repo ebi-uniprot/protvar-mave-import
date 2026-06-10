@@ -112,9 +112,13 @@ def import_scores_streaming(csv_folder, output_file):
                             else:
                                 simple_complex_counter["complex"] += 1
 
+                        # v4 uses "None" for missing scores (v3 did not); normalise null-ish tokens to NA
+                        raw_score = (row.get("score") or "").strip()
+                        score = "NA" if raw_score in ("", "None", "NaN", "nan", "null", "NA") else raw_score
+
                         extracted_row = {
                             "accession": base_accession,
-                            "variant_num": variant_num,
+                            "variant_num": variant_num if variant_num is not None else "NA",
                             "hgvs_nt": hgvs_nt,
                             #"hgvs_splice": hgvs_splice,
                             "hgvs_pro": hgvs_pro,
@@ -122,7 +126,7 @@ def import_scores_streaming(csv_folder, output_file):
                             "ref_aa": ref_aa if ref_aa else "NA",
                             "position": pos if pos is not None else "NA",
                             "alt_aa": alt_aa if alt_aa else "NA",
-                            "score": row.get("score", "")
+                            "score": score
                         }
 
                         writer.writerow(extracted_row)
