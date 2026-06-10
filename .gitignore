@@ -1,8 +1,7 @@
-# Full dataset — too large for the repo
-data/mave/
-
-# Allow main.json (tracked via LFS)
-!data/main.json
+# Generated importer output
+data/**/output/
+/mave_identifier*.csv
+/mave_score*.csv
 
 # Python
 __pycache__/

@@ -1,0 +1,3195 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "asOf": {
+      "type": "string"
+    },
+    "experimentSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "urn": {
+            "type": "string"
+          },
+          "publishedDate": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "recordType": {
+            "type": "string"
+          },
+          "experiments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "shortDescription": {
+                  "type": "string"
+                },
+                "abstractText": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "methodText": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "extraMetadata": {
+                  "type": "object",
+                  "properties": {
+                    "library_ID": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "recordType": {
+                  "type": "string"
+                },
+                "urn": {
+                  "type": "string"
+                },
+                "createdBy": {
+                  "type": "object",
+                  "properties": {
+                    "orcidId": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "recordType": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "firstName",
+                    "lastName",
+                    "orcidId",
+                    "recordType"
+                  ]
+                },
+                "modifiedBy": {
+                  "type": "object",
+                  "properties": {
+                    "orcidId": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "recordType": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "firstName",
+                    "lastName",
+                    "orcidId",
+                    "recordType"
+                  ]
+                },
+                "creationDate": {
+                  "type": "string"
+                },
+                "modificationDate": {
+                  "type": "string"
+                },
+                "publishedDate": {
+                  "type": "string"
+                },
+                "experimentSetUrn": {
+                  "type": "string"
+                },
+                "doiIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "identifier",
+                      "recordType",
+                      "url"
+                    ]
+                  }
+                },
+                "primaryPublicationIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "dbName": {
+                        "type": "string"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "authors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "primary": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "primary"
+                          ]
+                        }
+                      },
+                      "abstract": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "doi": {
+                        "type": "string"
+                      },
+                      "publicationYear": {
+                        "type": "integer"
+                      },
+                      "publicationJournal": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "referenceHtml": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "abstract",
+                      "authors",
+                      "dbName",
+                      "doi",
+                      "id",
+                      "identifier",
+                      "publicationJournal",
+                      "publicationYear",
+                      "recordType",
+                      "referenceHtml",
+                      "title",
+                      "url"
+                    ]
+                  }
+                },
+                "secondaryPublicationIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "dbName": {
+                        "type": "string"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "authors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "primary": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "primary"
+                          ]
+                        }
+                      },
+                      "abstract": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "doi": {
+                        "type": "string"
+                      },
+                      "publicationYear": {
+                        "type": "integer"
+                      },
+                      "publicationJournal": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "referenceHtml": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "abstract",
+                      "authors",
+                      "dbName",
+                      "doi",
+                      "id",
+                      "identifier",
+                      "publicationJournal",
+                      "publicationYear",
+                      "recordType",
+                      "referenceHtml",
+                      "title",
+                      "url"
+                    ]
+                  }
+                },
+                "rawReadIdentifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "identifier",
+                      "recordType",
+                      "url"
+                    ]
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "orcidId": {
+                        "type": "string"
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "givenName": {
+                        "type": "string"
+                      },
+                      "familyName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "familyName",
+                      "givenName",
+                      "orcidId",
+                      "recordType"
+                    ]
+                  }
+                },
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "keyword": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "system": {
+                            "type": "null"
+                          },
+                          "code": {
+                            "type": "null"
+                          },
+                          "version": {
+                            "type": "null"
+                          },
+                          "special": {
+                            "type": "boolean"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "code",
+                          "description",
+                          "key",
+                          "label",
+                          "special",
+                          "system",
+                          "version"
+                        ]
+                      },
+                      "description": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "recordType": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "description",
+                      "keyword",
+                      "recordType"
+                    ]
+                  }
+                },
+                "scoreSetUrns": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "externalLinks": {
+                  "type": "object"
+                },
+                "scoreSets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "methodText": {
+                        "type": "string"
+                      },
+                      "abstractText": {
+                        "type": "string"
+                      },
+                      "shortDescription": {
+                        "type": "string"
+                      },
+                      "extraMetadata": {
+                        "type": "object",
+                        "properties": {
+                          "chr": {
+                            "type": "string"
+                          },
+                          "end": {
+                            "type": "integer"
+                          },
+                          "start": {
+                            "type": "integer"
+                          },
+                          "reference": {
+                            "type": "string"
+                          },
+                          "abundance_codes": {
+                            "type": "object",
+                            "properties": {
+                              "low": {
+                                "type": "integer"
+                              },
+                              "wt-like": {
+                                "type": "integer"
+                              },
+                              "possibly_low": {
+                                "type": "integer"
+                              },
+                              "possibly_wt-like": {
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "low",
+                              "possibly_low",
+                              "possibly_wt-like",
+                              "wt-like"
+                            ]
+                          },
+                          "library_ID": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "dataUsagePolicy": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "recordType": {
+                        "type": "string"
+                      },
+                      "urn": {
+                        "type": "string"
+                      },
+                      "numVariants": {
+                        "type": "integer"
+                      },
+                      "license": {
+                        "type": "object",
+                        "properties": {
+                          "longName": {
+                            "type": "string"
+                          },
+                          "shortName": {
+                            "type": "string"
+                          },
+                          "active": {
+                            "type": "boolean"
+                          },
+                          "link": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "integer"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "active",
+                          "id",
+                          "link",
+                          "longName",
+                          "recordType",
+                          "shortName",
+                          "version"
+                        ]
+                      },
+                      "supersededScoreSet": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "urn": {
+                                "type": "string"
+                              },
+                              "recordType": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "recordType",
+                              "urn"
+                            ]
+                          }
+                        ]
+                      },
+                      "supersedingScoreSet": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "urn": {
+                                "type": "string"
+                              },
+                              "recordType": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "recordType",
+                              "urn"
+                            ]
+                          }
+                        ]
+                      },
+                      "metaAnalyzesScoreSetUrns": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "metaAnalyzedByScoreSetUrns": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "doiIdentifiers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "identifier",
+                            "recordType",
+                            "url"
+                          ]
+                        }
+                      },
+                      "primaryPublicationIdentifiers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "dbName": {
+                              "type": "string"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "authors": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "primary": {
+                                    "type": "boolean"
+                                  }
+                                },
+                                "required": [
+                                  "name",
+                                  "primary"
+                                ]
+                              }
+                            },
+                            "abstract": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "doi": {
+                              "type": "string"
+                            },
+                            "publicationYear": {
+                              "type": "integer"
+                            },
+                            "publicationJournal": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "referenceHtml": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "abstract",
+                            "authors",
+                            "dbName",
+                            "doi",
+                            "id",
+                            "identifier",
+                            "publicationJournal",
+                            "publicationYear",
+                            "recordType",
+                            "referenceHtml",
+                            "title",
+                            "url"
+                          ]
+                        }
+                      },
+                      "secondaryPublicationIdentifiers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "dbName": {
+                              "type": "string"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "authors": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "primary": {
+                                    "type": "boolean"
+                                  }
+                                },
+                                "required": [
+                                  "name",
+                                  "primary"
+                                ]
+                              }
+                            },
+                            "abstract": {
+                              "type": "string"
+                            },
+                            "doi": {
+                              "type": "string"
+                            },
+                            "publicationYear": {
+                              "type": "integer"
+                            },
+                            "publicationJournal": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "referenceHtml": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "abstract",
+                            "authors",
+                            "dbName",
+                            "doi",
+                            "id",
+                            "identifier",
+                            "publicationJournal",
+                            "publicationYear",
+                            "recordType",
+                            "referenceHtml",
+                            "title",
+                            "url"
+                          ]
+                        }
+                      },
+                      "publishedDate": {
+                        "type": "string"
+                      },
+                      "creationDate": {
+                        "type": "string"
+                      },
+                      "modificationDate": {
+                        "type": "string"
+                      },
+                      "createdBy": {
+                        "type": "object",
+                        "properties": {
+                          "orcidId": {
+                            "type": "string"
+                          },
+                          "firstName": {
+                            "type": "string"
+                          },
+                          "lastName": {
+                            "type": "string"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "firstName",
+                          "lastName",
+                          "orcidId",
+                          "recordType"
+                        ]
+                      },
+                      "modifiedBy": {
+                        "type": "object",
+                        "properties": {
+                          "orcidId": {
+                            "type": "string"
+                          },
+                          "firstName": {
+                            "type": "string"
+                          },
+                          "lastName": {
+                            "type": "string"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "firstName",
+                          "lastName",
+                          "orcidId",
+                          "recordType"
+                        ]
+                      },
+                      "targetGenes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "category": {
+                              "type": "string"
+                            },
+                            "externalIdentifiers": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "object",
+                                    "properties": {
+                                      "dbName": {
+                                        "type": "string"
+                                      },
+                                      "identifier": {
+                                        "type": "string"
+                                      },
+                                      "recordType": {
+                                        "type": "string"
+                                      },
+                                      "dbVersion": {
+                                        "type": "null"
+                                      },
+                                      "url": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      },
+                                      "referenceHtml": {
+                                        "type": "null"
+                                      }
+                                    },
+                                    "required": [
+                                      "dbName",
+                                      "dbVersion",
+                                      "identifier",
+                                      "recordType",
+                                      "referenceHtml",
+                                      "url"
+                                    ]
+                                  },
+                                  "offset": {
+                                    "type": "integer"
+                                  },
+                                  "recordType": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "identifier",
+                                  "offset",
+                                  "recordType"
+                                ]
+                              }
+                            },
+                            "id": {
+                              "type": "integer"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "targetSequence": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "sequenceType": {
+                                      "type": "string"
+                                    },
+                                    "sequence": {
+                                      "type": "string"
+                                    },
+                                    "label": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "recordType": {
+                                      "type": "string"
+                                    },
+                                    "taxonomy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "code": {
+                                          "type": "integer"
+                                        },
+                                        "organismName": {
+                                          "type": "string"
+                                        },
+                                        "commonName": {
+                                          "type": "string"
+                                        },
+                                        "rank": {
+                                          "type": "string"
+                                        },
+                                        "hasDescribedSpeciesName": {
+                                          "type": "boolean"
+                                        },
+                                        "articleReference": {
+                                          "type": "string"
+                                        },
+                                        "genomeIdentifierId": {
+                                          "type": [
+                                            "integer",
+                                            "null"
+                                          ]
+                                        },
+                                        "id": {
+                                          "type": "integer"
+                                        },
+                                        "recordType": {
+                                          "type": "string"
+                                        },
+                                        "url": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "articleReference",
+                                        "code",
+                                        "commonName",
+                                        "genomeIdentifierId",
+                                        "hasDescribedSpeciesName",
+                                        "id",
+                                        "organismName",
+                                        "rank",
+                                        "recordType",
+                                        "url"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "label",
+                                    "recordType",
+                                    "sequence",
+                                    "sequenceType",
+                                    "taxonomy"
+                                  ]
+                                }
+                              ]
+                            },
+                            "targetAccession": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "accession": {
+                                      "type": "string"
+                                    },
+                                    "isBaseEditor": {
+                                      "type": "boolean"
+                                    },
+                                    "assembly": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "gene": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "recordType": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "accession",
+                                    "assembly",
+                                    "gene",
+                                    "isBaseEditor",
+                                    "recordType"
+                                  ]
+                                }
+                              ]
+                            },
+                            "mappedHgncName": {
+                              "type": "null"
+                            },
+                            "uniprotIdFromMappedMetadata": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "category",
+                            "externalIdentifiers",
+                            "id",
+                            "mappedHgncName",
+                            "name",
+                            "recordType",
+                            "targetAccession",
+                            "targetSequence",
+                            "uniprotIdFromMappedMetadata"
+                          ]
+                        }
+                      },
+                      "datasetColumns": {
+                        "type": "object",
+                        "properties": {
+                          "scoreColumns": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "countColumns": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "scoreColumnsMetadata": {
+                            "anyOf": [
+                              {
+                                "type": "null"
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "iqr": {
+                                    "type": "object",
+                                    "properties": {
+                                      "description": {
+                                        "type": "string"
+                                      },
+                                      "details": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "description",
+                                      "details"
+                                    ]
+                                  },
+                                  "barcodes": {
+                                    "type": "object",
+                                    "properties": {
+                                      "description": {
+                                        "type": "string"
+                                      },
+                                      "details": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "description",
+                                      "details"
+                                    ]
+                                  },
+                                  "variant_type": {
+                                    "type": "object",
+                                    "properties": {
+                                      "description": {
+                                        "type": "string"
+                                      },
+                                      "details": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "description",
+                                      "details"
+                                    ]
+                                  },
+                                  "ei_serror": {
+                                    "type": "object",
+                                    "properties": {
+                                      "description": {
+                                        "type": "string"
+                                      },
+                                      "details": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "description",
+                                      "details"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "variant_type"
+                                ]
+                              }
+                            ]
+                          },
+                          "countColumnsMetadata": {
+                            "type": "null"
+                          },
+                          "recordType": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "countColumns",
+                          "countColumnsMetadata",
+                          "recordType",
+                          "scoreColumns",
+                          "scoreColumnsMetadata"
+                        ]
+                      },
+                      "externalLinks": {
+                        "type": "object",
+                        "properties": {
+                          "ucscGenomeBrowser": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          },
+                          "igvf": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          }
+                        }
+                      },
+                      "contributors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "orcidId": {
+                              "type": "string"
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "givenName": {
+                              "type": "string"
+                            },
+                            "familyName": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "familyName",
+                            "givenName",
+                            "orcidId",
+                            "recordType"
+                          ]
+                        }
+                      },
+                      "scoreCalibrations": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "type": "string"
+                            },
+                            "researchUseOnly": {
+                              "type": "boolean"
+                            },
+                            "baselineScore": {
+                              "type": [
+                                "null",
+                                "number"
+                              ]
+                            },
+                            "baselineScoreDescription": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "notes": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "functionalClassifications": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "label": {
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      },
+                                      "functionalClassification": {
+                                        "type": "string"
+                                      },
+                                      "range": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": [
+                                            "null",
+                                            "number"
+                                          ]
+                                        }
+                                      },
+                                      "class": {
+                                        "type": "null"
+                                      },
+                                      "inclusiveLowerBound": {
+                                        "type": "boolean"
+                                      },
+                                      "inclusiveUpperBound": {
+                                        "type": "boolean"
+                                      },
+                                      "acmgClassification": {
+                                        "anyOf": [
+                                          {
+                                            "type": "null"
+                                          },
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "criterion": {
+                                                "type": "string"
+                                              },
+                                              "evidenceStrength": {
+                                                "type": "string"
+                                              },
+                                              "points": {
+                                                "type": [
+                                                  "integer",
+                                                  "null"
+                                                ]
+                                              },
+                                              "recordType": {
+                                                "type": "string"
+                                              },
+                                              "creationDate": {
+                                                "type": "string"
+                                              },
+                                              "modificationDate": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "creationDate",
+                                              "criterion",
+                                              "evidenceStrength",
+                                              "modificationDate",
+                                              "points",
+                                              "recordType"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "oddspathsRatio": {
+                                        "type": [
+                                          "null",
+                                          "number"
+                                        ]
+                                      },
+                                      "positiveLikelihoodRatio": {
+                                        "type": "null"
+                                      },
+                                      "recordType": {
+                                        "type": "string"
+                                      },
+                                      "variants": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "urn": {
+                                              "type": "string"
+                                            },
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "count_data": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "select1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select5": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select6": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select7": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "select8": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS5": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS6": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS7": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlS8": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS5": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS6": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS7": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "controlNS8": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect5": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect6": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect7": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "nonselect8": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_library": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_rna_rep1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_rna_rep2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_day5_rep1": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_day5_rep2": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_day11_rep1": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_day11_rep2": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_negative_control": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_1A_input": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_1B_input": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_2A_input": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_2B_input": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_2C_input": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_1A_output_1": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_1A_output_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_1B_output_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_1B_output_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_2A_output_1": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_2A_output_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_2B_output_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_2B_output_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "count_2C_output_1": {
+                                                      "type": "integer"
+                                                    },
+                                                    "count_2C_output_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_1_normal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_2_normal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_3_normal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_4_normal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_5_normal_bin_count": {
+                                                      "type": "number"
+                                                    },
+                                                    "rep_6_normal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_7_normal_bin_count": {
+                                                      "type": "integer"
+                                                    },
+                                                    "rep_1_abnormal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_2_abnormal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_3_abnormal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_4_abnormal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_5_abnormal_bin_count": {
+                                                      "type": "number"
+                                                    },
+                                                    "rep_6_abnormal_bin_count": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep_7_abnormal_bin_count": {
+                                                      "type": "integer"
+                                                    },
+                                                    "Count_Tile_1_Bin_1_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_1_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_1_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_2_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_2_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_2_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_3_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_3_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_3_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_4_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_4_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_4_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_1_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_1_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_1_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_2_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_2_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_2_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_3_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_3_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_3_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_4_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_4_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_4_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_1_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_1_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_1_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_2_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_2_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_2_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_3_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_3_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_3_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_4_BioReplicate_1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_4_BioReplicate_2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_4_BioReplicate_3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_1_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_2_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_3_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_1_Bin_4_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_1_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_2_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_3_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_2_Bin_4_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_1_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_2_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_3_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Count_Tile_3_Bin_4_BioReplicate_4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    }
+                                                  }
+                                                },
+                                                "score_data": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "sd": {
+                                                      "type": "number"
+                                                    },
+                                                    "se": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score": {
+                                                      "type": [
+                                                        "number",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "snv": {
+                                                      "type": "number"
+                                                    },
+                                                    "expts": {
+                                                      "type": "number"
+                                                    },
+                                                    "score1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score5": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score6": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score7": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score8": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "lower_ci": {
+                                                      "type": "number"
+                                                    },
+                                                    "upper_ci": {
+                                                      "type": "number"
+                                                    },
+                                                    "exp1_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp2_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp3_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp4_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp5_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp6_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp7_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "exp8_w_ave": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "median_w_ave": {
+                                                      "type": "number"
+                                                    },
+                                                    "abundance_class": {
+                                                      "type": "number"
+                                                    },
+                                                    "mavedb_clnsig": {
+                                                      "type": "string"
+                                                    },
+                                                    "mavedb_clnrevstat": {
+                                                      "type": "string"
+                                                    },
+                                                    "SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A1_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A2_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A3_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B1_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B2_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B3_SE": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A1_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A2_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "A3_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B1_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B2_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "B3_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "High_conf": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "replicates": {
+                                                      "type": "integer"
+                                                    },
+                                                    "df": {
+                                                      "type": "integer"
+                                                    },
+                                                    "score_rna": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score_rep1": {
+                                                      "type": "number"
+                                                    },
+                                                    "score_rep2": {
+                                                      "type": "number"
+                                                    },
+                                                    "score_rna_rep1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "score_rna_rep2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "ci_low": {
+                                                      "type": "number"
+                                                    },
+                                                    "ci_high": {
+                                                      "type": "number"
+                                                    },
+                                                    "single_plex_mean": {
+                                                      "type": "number"
+                                                    },
+                                                    "single_plex_stderr": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "LLR": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "stderr": {
+                                                      "type": "number"
+                                                    },
+                                                    "LLR_ci_lower": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "LLR_ci_upper": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "LLR_evidence_strength": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "std": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "error": {
+                                                      "type": "number"
+                                                    },
+                                                    "assay": {
+                                                      "type": "integer"
+                                                    },
+                                                    "bc_per_var": {
+                                                      "type": "integer"
+                                                    },
+                                                    "annnotation": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "category": {
+                                                      "type": "string"
+                                                    },
+                                                    "ci_lower": {
+                                                      "type": "number"
+                                                    },
+                                                    "ci_upper": {
+                                                      "type": "number"
+                                                    },
+                                                    "truth_set": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "rep1_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep2_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep3_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep4_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep5_score": {
+                                                      "type": "number"
+                                                    },
+                                                    "rep6_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "rep7_score": {
+                                                      "type": "number"
+                                                    },
+                                                    "functional_consequence": {
+                                                      "type": "string"
+                                                    },
+                                                    "SE_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "N_replicates": {
+                                                      "type": "integer"
+                                                    },
+                                                    "Score_Tile1_BioReplicate1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile1_BioReplicate2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile1_BioReplicate3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile2_BioReplicate1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile2_BioReplicate2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile2_BioReplicate3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile3_BioReplicate1": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile3_BioReplicate2": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile3_BioReplicate3": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile1_BioReplicate4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile2_BioReplicate4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Score_Tile3_BioReplicate4": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "Filter_CI": {
+                                                      "type": "boolean"
+                                                    },
+                                                    "LLR_strength": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "Filter_Hypercomplement": {
+                                                      "type": "boolean"
+                                                    },
+                                                    "var": {
+                                                      "type": "number"
+                                                    },
+                                                    "control_std": {
+                                                      "type": "number"
+                                                    },
+                                                    "control_var": {
+                                                      "type": "number"
+                                                    },
+                                                    "control_score": {
+                                                      "type": "number"
+                                                    },
+                                                    "control_rep1_score": {
+                                                      "type": "number"
+                                                    },
+                                                    "control_rep2_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "control_rep3_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "control_rep4_score": {
+                                                      "type": [
+                                                        "null",
+                                                        "number"
+                                                      ]
+                                                    },
+                                                    "alt": {
+                                                      "type": "string"
+                                                    },
+                                                    "pos": {
+                                                      "type": "integer"
+                                                    },
+                                                    "ref": {
+                                                      "type": "string"
+                                                    },
+                                                    "exon": {
+                                                      "type": "string"
+                                                    },
+                                                    "chrom": {
+                                                      "type": "string"
+                                                    },
+                                                    "target": {
+                                                      "type": "string"
+                                                    },
+                                                    "95_ci_lower": {
+                                                      "type": "number"
+                                                    },
+                                                    "95_ci_upper": {
+                                                      "type": "number"
+                                                    },
+                                                    "consequence": {
+                                                      "type": "string"
+                                                    },
+                                                    "CDS_position": {
+                                                      "type": "string"
+                                                    },
+                                                    "cDNA_position": {
+                                                      "type": "string"
+                                                    },
+                                                    "standard_error": {
+                                                      "type": "number"
+                                                    },
+                                                    "variant_qc_flag": {
+                                                      "type": "string"
+                                                    },
+                                                    "amino_acid_change": {
+                                                      "type": "string"
+                                                    },
+                                                    "gmm_density_normal": {
+                                                      "type": "number"
+                                                    },
+                                                    "gmm_density_abnormal": {
+                                                      "type": "number"
+                                                    },
+                                                    "SDV": {
+                                                      "type": "string"
+                                                    },
+                                                    "FGFR1_Act_Rep1": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "FGFR1_Act_Rep2": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    },
+                                                    "FGFR1_Act_Rep3": {
+                                                      "type": "string"
+                                                    },
+                                                    "FGFR1_Act_Rep4": {
+                                                      "type": [
+                                                        "null",
+                                                        "string"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "score"
+                                                  ]
+                                                }
+                                              },
+                                              "required": [
+                                                "count_data",
+                                                "score_data"
+                                              ]
+                                            },
+                                            "scoreSetId": {
+                                              "type": "integer"
+                                            },
+                                            "hgvsNt": {
+                                              "type": [
+                                                "null",
+                                                "string"
+                                              ]
+                                            },
+                                            "hgvsPro": {
+                                              "type": [
+                                                "null",
+                                                "string"
+                                              ]
+                                            },
+                                            "hgvsSplice": {
+                                              "type": "null"
+                                            },
+                                            "creationDate": {
+                                              "type": "string"
+                                            },
+                                            "modificationDate": {
+                                              "type": "string"
+                                            },
+                                            "id": {
+                                              "type": "integer"
+                                            },
+                                            "recordType": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "creationDate",
+                                            "data",
+                                            "hgvsNt",
+                                            "hgvsPro",
+                                            "hgvsSplice",
+                                            "id",
+                                            "modificationDate",
+                                            "recordType",
+                                            "scoreSetId",
+                                            "urn"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "required": [
+                                      "acmgClassification",
+                                      "class",
+                                      "description",
+                                      "functionalClassification",
+                                      "inclusiveLowerBound",
+                                      "inclusiveUpperBound",
+                                      "label",
+                                      "oddspathsRatio",
+                                      "positiveLikelihoodRatio",
+                                      "range",
+                                      "recordType",
+                                      "variants"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            "thresholdSources": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string"
+                                  },
+                                  "dbName": {
+                                    "type": "string"
+                                  },
+                                  "recordType": {
+                                    "type": "string"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "authors": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "primary": {
+                                          "type": "boolean"
+                                        }
+                                      },
+                                      "required": [
+                                        "name",
+                                        "primary"
+                                      ]
+                                    }
+                                  },
+                                  "abstract": {
+                                    "type": "string"
+                                  },
+                                  "doi": {
+                                    "type": "string"
+                                  },
+                                  "publicationYear": {
+                                    "type": "integer"
+                                  },
+                                  "publicationJournal": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "referenceHtml": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "abstract",
+                                  "authors",
+                                  "dbName",
+                                  "doi",
+                                  "id",
+                                  "identifier",
+                                  "publicationJournal",
+                                  "publicationYear",
+                                  "recordType",
+                                  "referenceHtml",
+                                  "title",
+                                  "url"
+                                ]
+                              }
+                            },
+                            "classificationSources": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string"
+                                  },
+                                  "dbName": {
+                                    "type": "string"
+                                  },
+                                  "recordType": {
+                                    "type": "string"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "authors": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "primary": {
+                                          "type": "boolean"
+                                        }
+                                      },
+                                      "required": [
+                                        "name",
+                                        "primary"
+                                      ]
+                                    }
+                                  },
+                                  "abstract": {
+                                    "type": "string"
+                                  },
+                                  "doi": {
+                                    "type": "string"
+                                  },
+                                  "publicationYear": {
+                                    "type": "integer"
+                                  },
+                                  "publicationJournal": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "referenceHtml": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "abstract",
+                                  "authors",
+                                  "dbName",
+                                  "doi",
+                                  "id",
+                                  "identifier",
+                                  "publicationJournal",
+                                  "publicationYear",
+                                  "recordType",
+                                  "referenceHtml",
+                                  "title",
+                                  "url"
+                                ]
+                              }
+                            },
+                            "methodSources": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "identifier": {
+                                    "type": "string"
+                                  },
+                                  "dbName": {
+                                    "type": "string"
+                                  },
+                                  "recordType": {
+                                    "type": "string"
+                                  },
+                                  "title": {
+                                    "type": "string"
+                                  },
+                                  "authors": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "primary": {
+                                          "type": "boolean"
+                                        }
+                                      },
+                                      "required": [
+                                        "name",
+                                        "primary"
+                                      ]
+                                    }
+                                  },
+                                  "abstract": {
+                                    "type": "string"
+                                  },
+                                  "doi": {
+                                    "type": "string"
+                                  },
+                                  "publicationYear": {
+                                    "type": "integer"
+                                  },
+                                  "publicationJournal": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "referenceHtml": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "abstract",
+                                  "authors",
+                                  "dbName",
+                                  "doi",
+                                  "id",
+                                  "identifier",
+                                  "publicationJournal",
+                                  "publicationYear",
+                                  "recordType",
+                                  "referenceHtml",
+                                  "title",
+                                  "url"
+                                ]
+                              }
+                            },
+                            "calibrationMetadata": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "prior_probability_pathogenicity": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "prior_probability_pathogenicity"
+                                  ]
+                                }
+                              ]
+                            },
+                            "recordType": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "integer"
+                            },
+                            "urn": {
+                              "type": "string"
+                            },
+                            "scoreSetId": {
+                              "type": "integer"
+                            },
+                            "investigatorProvided": {
+                              "type": "boolean"
+                            },
+                            "primary": {
+                              "type": "boolean"
+                            },
+                            "private": {
+                              "type": "boolean"
+                            },
+                            "createdBy": {
+                              "type": "object",
+                              "properties": {
+                                "orcidId": {
+                                  "type": "string"
+                                },
+                                "firstName": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                },
+                                "lastName": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                },
+                                "recordType": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "firstName",
+                                "lastName",
+                                "orcidId",
+                                "recordType"
+                              ]
+                            },
+                            "modifiedBy": {
+                              "type": "object",
+                              "properties": {
+                                "orcidId": {
+                                  "type": "string"
+                                },
+                                "firstName": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                },
+                                "lastName": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                },
+                                "recordType": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "firstName",
+                                "lastName",
+                                "orcidId",
+                                "recordType"
+                              ]
+                            },
+                            "creationDate": {
+                              "type": "string"
+                            },
+                            "modificationDate": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "baselineScore",
+                            "baselineScoreDescription",
+                            "calibrationMetadata",
+                            "classificationSources",
+                            "createdBy",
+                            "creationDate",
+                            "functionalClassifications",
+                            "id",
+                            "investigatorProvided",
+                            "methodSources",
+                            "modificationDate",
+                            "modifiedBy",
+                            "notes",
+                            "primary",
+                            "private",
+                            "recordType",
+                            "researchUseOnly",
+                            "scoreSetId",
+                            "thresholdSources",
+                            "title",
+                            "urn"
+                          ]
+                        }
+                      },
+                      "private": {
+                        "type": "boolean"
+                      },
+                      "processingState": {
+                        "type": "string"
+                      },
+                      "processingErrors": {
+                        "type": "null"
+                      },
+                      "mappingState": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "mappingErrors": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "error_message": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "error_message"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "abstractText",
+                      "contributors",
+                      "createdBy",
+                      "creationDate",
+                      "dataUsagePolicy",
+                      "datasetColumns",
+                      "doiIdentifiers",
+                      "externalLinks",
+                      "extraMetadata",
+                      "license",
+                      "mappingErrors",
+                      "mappingState",
+                      "metaAnalyzedByScoreSetUrns",
+                      "metaAnalyzesScoreSetUrns",
+                      "methodText",
+                      "modificationDate",
+                      "modifiedBy",
+                      "numVariants",
+                      "primaryPublicationIdentifiers",
+                      "private",
+                      "processingErrors",
+                      "processingState",
+                      "publishedDate",
+                      "recordType",
+                      "scoreCalibrations",
+                      "secondaryPublicationIdentifiers",
+                      "shortDescription",
+                      "supersededScoreSet",
+                      "supersedingScoreSet",
+                      "targetGenes",
+                      "title",
+                      "urn"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "abstractText",
+                "contributors",
+                "createdBy",
+                "creationDate",
+                "doiIdentifiers",
+                "experimentSetUrn",
+                "externalLinks",
+                "extraMetadata",
+                "keywords",
+                "methodText",
+                "modificationDate",
+                "modifiedBy",
+                "primaryPublicationIdentifiers",
+                "publishedDate",
+                "rawReadIdentifiers",
+                "recordType",
+                "scoreSetUrns",
+                "scoreSets",
+                "secondaryPublicationIdentifiers",
+                "shortDescription",
+                "title",
+                "urn"
+              ]
+            }
+          },
+          "createdBy": {
+            "type": "object",
+            "properties": {
+              "orcidId": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "recordType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "firstName",
+              "lastName",
+              "orcidId",
+              "recordType"
+            ]
+          },
+          "modifiedBy": {
+            "type": "object",
+            "properties": {
+              "orcidId": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "recordType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "firstName",
+              "lastName",
+              "orcidId",
+              "recordType"
+            ]
+          },
+          "creationDate": {
+            "type": "string"
+          },
+          "modificationDate": {
+            "type": "string"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "orcidId": {
+                  "type": "string"
+                },
+                "recordType": {
+                  "type": "string"
+                },
+                "givenName": {
+                  "type": "string"
+                },
+                "familyName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "familyName",
+                "givenName",
+                "orcidId",
+                "recordType"
+              ]
+            }
+          }
+        },
+        "required": [
+          "contributors",
+          "createdBy",
+          "creationDate",
+          "experiments",
+          "id",
+          "modificationDate",
+          "modifiedBy",
+          "publishedDate",
+          "recordType",
+          "urn"
+        ]
+      }
+    }
+  },
+  "required": [
+    "asOf",
+    "experimentSets",
+    "title"
+  ]
+}

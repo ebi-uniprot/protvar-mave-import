@@ -149,13 +149,13 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--input",
-        default="data/samples/csv/",
-        help="Path to the folder containing *.scores.csv files (default: data/samples/csv/)"
+        default="data/v4/samples/csv/",
+        help="Path to the folder containing *.scores.csv files (default: data/v4/samples/csv/)"
     )
     parser.add_argument(
         "--output",
-        default="data/samples/output/mave_score_sample.csv",
-        help="Path for the output CSV file (default: data/samples/output/mave_score_sample.csv)"
+        default="data/v4/output/mave_score.csv",
+        help="Path for the output CSV file (default: data/v4/output/mave_score.csv)"
     )
     args = parser.parse_args()
 
@@ -165,7 +165,7 @@ if __name__ == "__main__":
 
     import_scores_streaming(args.input, args.output)
 
-# Last run 03/10/2025; SQL import check in pg_import script
+# Last run 03/10/2025; load via create_tables.sql + \copy, then sql/check_*.sql
 """ 
 Finished streaming 2680 files into mave_score.csv
 

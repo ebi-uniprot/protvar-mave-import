@@ -1,87 +1,148 @@
 title: str
+  str
 asOf: str
+  str
 experimentSets: list
-  List[1223] of dict
+  List[1243] of dict
     urn: str
+      str
     publishedDate: str
+      str
     id: int
+      int
     recordType: str
+      str
     experiments: list
       List[4] of dict
         title: str
+          str
         shortDescription: str
+          str
         abstractText: str
+          str
         methodText: str
+          str
         extraMetadata: dict
         recordType: str
+          str
         urn: str
+          str
         createdBy: dict
           orcidId: str
+            str
           firstName: str
+            str
           lastName: str
+            str
           recordType: str
+            str
         modifiedBy: dict
           orcidId: str
+            str
           firstName: str
+            str
           lastName: str
+            str
           recordType: str
+            str
         creationDate: str
+          str
         modificationDate: str
+          str
         publishedDate: str
+          str
         experimentSetUrn: str
+          str
         doiIdentifiers: list
           Empty List
         primaryPublicationIdentifiers: list
           List[1] of dict
             identifier: str
+              str
             dbName: str
+              str
             recordType: str
+              str
             title: str
+              str
             authors: list
               List[21] of dict
                 name: str
+                  str
                 primary: bool
+                  bool
             abstract: str
+              str
             doi: str
+              str
             publicationYear: int
+              int
             publicationJournal: str
+              str
             url: str
+              str
             referenceHtml: str
+              str
             id: int
+              int
         secondaryPublicationIdentifiers: list
           Empty List
         rawReadIdentifiers: list
           List[2] of dict
             identifier: str
+              str
             id: int
+              int
             recordType: str
+              str
             url: str
+              str
         contributors: list
           Empty List
         keywords: list
           Empty List
+        scoreSetUrns: list
+          List[4] of str
+            str
+        externalLinks: dict
         scoreSets: list
           List[4] of dict
             title: str
+              str
             methodText: str
+              str
             abstractText: str
+              str
             shortDescription: str
+              str
             extraMetadata: dict
             dataUsagePolicy: NoneType
               NoneType
             recordType: str
+              str
             urn: str
+              str
             numVariants: int
+              int
             license: dict
               longName: str
+                str
               shortName: str
+                str
               active: bool
+                bool
               link: str
+                str
               version: str
+                str
               id: int
+                int
               recordType: str
+                str
             supersededScoreSet: NoneType
+              NoneType
             supersedingScoreSet: NoneType
+              NoneType
             metaAnalyzesScoreSetUrns: list
               Empty List
             metaAnalyzedByScoreSetUrns: list
@@ -93,79 +154,142 @@ experimentSets: list
             secondaryPublicationIdentifiers: list
               Empty List
             publishedDate: str
+              str
             creationDate: str
+              str
             modificationDate: str
+              str
             createdBy: dict
               orcidId: str
+                str
               firstName: str
+                str
               lastName: str
+                str
               recordType: str
+                str
             modifiedBy: dict
               orcidId: str
+                str
               firstName: str
+                str
               lastName: str
+                str
               recordType: str
+                str
             targetGenes: list
               List[1] of dict
                 name: str
+                  str
                 category: str
+                  str
                 externalIdentifiers: list
                   List[3] of dict
                     identifier: dict
                       dbName: str
+                        str
                       identifier: str
+                        str
                       recordType: str
+                        str
                       dbVersion: NoneType
+                        NoneType
                       url: str
+                        str
                       referenceHtml: NoneType
+                        NoneType
                     offset: int
+                      int
                     recordType: str
+                      str
                 id: int
+                  int
                 recordType: str
+                  str
                 targetSequence: dict
                   sequenceType: str
+                    str
                   sequence: str
+                    str
                   label: NoneType
+                    NoneType
                   recordType: str
+                    str
                   taxonomy: dict
-                    taxId: int
+                    code: int
+                      int
                     organismName: str
+                      str
                     commonName: str
+                      str
                     rank: str
+                      str
                     hasDescribedSpeciesName: bool
+                      bool
                     articleReference: str
-                    genomeId: NoneType
+                      str
+                    genomeIdentifierId: int
+                      int
                     id: int
+                      int
                     recordType: str
+                      str
                     url: str
+                      str
                 targetAccession: NoneType
+                  NoneType
+                mappedHgncName: NoneType
+                  NoneType
+                uniprotIdFromMappedMetadata: str
+                  str
             datasetColumns: dict
-              countColumns: list
-                Empty List
               scoreColumns: list
                 List[4] of str
+                  str
+              countColumns: list
+                Empty List
+              scoreColumnsMetadata: NoneType
+                NoneType
+              countColumnsMetadata: NoneType
+                NoneType
+              recordType: str
+                str
             externalLinks: dict
             contributors: list
               Empty List
-            scoreRanges: NoneType
-            scoreCalibrations: NoneType
+            scoreCalibrations: list
+              Empty List
             private: bool
+              bool
             processingState: str
+              str
             processingErrors: NoneType
+              NoneType
             mappingState: str
-            mappingErrors: dict
-              error_message: str
+              str
+            mappingErrors: NoneType
+              NoneType
     createdBy: dict
       orcidId: str
+        str
       firstName: str
+        str
       lastName: str
+        str
       recordType: str
+        str
     modifiedBy: dict
       orcidId: str
+        str
       firstName: str
+        str
       lastName: str
+        str
       recordType: str
+        str
     creationDate: str
+      str
     modificationDate: str
+      str
     contributors: list
       Empty List

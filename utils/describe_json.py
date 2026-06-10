@@ -1,4 +1,11 @@
+"""Print a key/type tree of a MaveDB main.json export.
+
+Usage:
+    python utils/describe_json.py [--input data/v4/main.json] > data/v4/schema/json_summary.txt
+"""
+import argparse
 import json
+
 
 def describe_json(data, indent=0):
     pad = '  ' * indent
@@ -13,7 +20,11 @@ def describe_json(data, indent=0):
     else:
         print(f"{pad}{type(data).__name__}")
 
-# Load and analyze JSON
-with open('data/main.json', 'r') as f:
-    data = json.load(f)
-    describe_json(data)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Print a key/type tree of a MaveDB JSON export.")
+    parser.add_argument("--input", default="data/v4/main.json", help="Path to main.json (default: data/v4/main.json)")
+    args = parser.parse_args()
+
+    with open(args.input, 'r', encoding='utf-8') as f:
+        describe_json(json.load(f))

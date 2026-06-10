@@ -1,6 +1,6 @@
 -- Post-import HGVS protein variant breakdown for mave_score.
--- Run after pg_import.sh to verify the distribution matches expected counts.
--- Expected counts are from the 2025-03-10 import; see runs/2025-03-10.json.
+-- Run after loading to verify the distribution matches expected counts.
+-- Expected counts are from the 2025-03-10 (v3) import.
 
 -- Single amino acid change: missense, nonsense, synonymous (with optional refseq prefix)
 SELECT COUNT(*) FROM mave_score

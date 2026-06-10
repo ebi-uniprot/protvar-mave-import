@@ -39,7 +39,7 @@ These are the only fields from the large JSON structure that are parsed and writ
 # experimentSets[].experiments[].scoreSets[].targetGenes[].externalIdentifiers[].identifier.dbName
 # experimentSets[].experiments[].scoreSets[].targetGenes[].externalIdentifiers[].identifier.identifier
 # experimentSets[].experiments[].scoreSets[].targetGenes[].targetSequence.taxonomy.taxId
-def extract_score_set_data(json_path, output_csv):
+def extract_score_set_data(json_path, output_csv, dry_run=False):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -111,7 +111,8 @@ def extract_score_set_data(json_path, output_csv):
 
                     target_sequence = target_gene.get("targetSequence") or {}
                     taxonomy = target_sequence.get("taxonomy") or {}
-                    tax_id = str(taxonomy.get("taxId", ""))
+                    # MaveDB v4 renamed taxonomy.taxId → taxonomy.code; accept either
+                    tax_id = str(taxonomy.get("code", taxonomy.get("taxId", "")))
                     row["GeneTaxId"] = tax_id
 
                     # Count summaries
@@ -135,17 +136,20 @@ def extract_score_set_data(json_path, output_csv):
                     extracted_rows.append(row)
 
     # Write to CSV
-    os.makedirs(os.path.dirname(output_csv), exist_ok=True)
-    with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=[
-            #"recordType",
-            "urn", "numVariants", "Gene", "GeneCategory", "GeneTaxId", "UniProt", "UniProtOffset", "RefSeq", "RefSeqOffset", "Ensembl", "EnsemblOffset"
-        ])
-        writer.writeheader()
-        writer.writerows(extracted_rows)
-
-    # Print summary
-    print(f"Extracted {len(extracted_rows)} score sets to {output_csv}")
+    if dry_run:
+        print(f"Dry run: skipping write of {len(extracted_rows)} score sets to {output_csv}")
+    else:
+        out_dir = os.path.dirname(output_csv)
+        if out_dir:
+            os.makedirs(out_dir, exist_ok=True)
+        with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=[
+                #"recordType",
+                "urn", "numVariants", "Gene", "GeneCategory", "GeneTaxId", "UniProt", "UniProtOffset", "RefSeq", "RefSeqOffset", "Ensembl", "EnsemblOffset"
+            ])
+            writer.writeheader()
+            writer.writerows(extracted_rows)
+        print(f"Extracted {len(extracted_rows)} score sets to {output_csv}")
     print("\nSummary:")
     print(f"  Human sets (taxId=9606): {human_sets}")
     print(f"  Non-human sets: {nonhuman_sets}")
@@ -165,13 +169,18 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--input",
-        default="data/samples/first_10.json",
-        help="Path to the MaveDB JSON file (default: data/samples/first_10.json)"
+        default="data/v4/main.json",
+        help="Path to the MaveDB JSON file (default: data/v4/main.json)"
     )
     parser.add_argument(
         "--output",
-        default="data/samples/output/mave_identifier_sample.csv",
-        help="Path for the output CSV file (default: data/samples/output/mave_identifier_sample.csv)"
+        default="data/v4/output/mave_identifier.csv",
+        help="Path for the output CSV file (default: data/v4/output/mave_identifier.csv)"
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Parse and summarise without writing the CSV"
     )
     args = parser.parse_args()
-    extract_score_set_data(args.input, args.output)
+    extract_score_set_data(args.input, args.output, dry_run=args.dry_run)
