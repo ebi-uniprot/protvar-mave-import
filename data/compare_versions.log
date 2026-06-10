@@ -1,0 +1,95 @@
+       tbl       | ver  |  count  
+-----------------+------+---------
+ mave_identifier | base |    2731
+ mave_identifier | v3   |    2731
+ mave_identifier | v4   |    2790
+ mave_score      | base | 7469856
+ mave_score      | v3   | 7469856
+ mave_score      | v4   | 7704038
+(6 rows)
+
+ ver | score_sets | human | with_uniprot 
+-----+------------+-------+--------------
+ v3  |       2731 |  1194 |         1745
+ v4  |       2790 |  1226 |         1753
+(2 rows)
+
+   delta    |           urn            
+------------+--------------------------
+ only_in_v3 | urn:mavedb:00000001-d-1
+ only_in_v3 | urn:mavedb:00000097-0-1
+ only_in_v3 | urn:mavedb:00000108-a-2
+ only_in_v3 | urn:mavedb:00000674-a-3
+ only_in_v3 | urn:mavedb:00000674-a-4
+ only_in_v3 | urn:mavedb:00001220-a-9
+ only_in_v4 | urn:mavedb:00000098-a-2
+ only_in_v4 | urn:mavedb:00000108-0-1
+ only_in_v4 | urn:mavedb:00000108-b-1
+ only_in_v4 | urn:mavedb:00000665-b-1
+ only_in_v4 | urn:mavedb:00000665-c-1
+ only_in_v4 | urn:mavedb:00000665-d-1
+ only_in_v4 | urn:mavedb:00000674-b-1
+ only_in_v4 | urn:mavedb:00000674-c-1
+ only_in_v4 | urn:mavedb:00001217-a-3
+ only_in_v4 | urn:mavedb:00001217-a-4
+ only_in_v4 | urn:mavedb:00001222-a-2
+ only_in_v4 | urn:mavedb:00001222-b-2
+ only_in_v4 | urn:mavedb:00001227-a-2
+ only_in_v4 | urn:mavedb:00001229-a-2
+ only_in_v4 | urn:mavedb:00001230-a-2
+ only_in_v4 | urn:mavedb:00001231-a-2
+ only_in_v4 | urn:mavedb:00001242-a-1
+ only_in_v4 | urn:mavedb:00001243-a-1
+ only_in_v4 | urn:mavedb:00001244-a-1
+ only_in_v4 | urn:mavedb:00001244-b-1
+ only_in_v4 | urn:mavedb:00001245-a-1
+ only_in_v4 | urn:mavedb:00001245-a-1
+ only_in_v4 | urn:mavedb:00001245-a-2
+ only_in_v4 | urn:mavedb:00001245-a-2
+ only_in_v4 | urn:mavedb:00001246-a-1
+ only_in_v4 | urn:mavedb:00001247-a-1
+ only_in_v4 | urn:mavedb:00001248-a-1
+ only_in_v4 | urn:mavedb:00001248-a-2
+ only_in_v4 | urn:mavedb:00001248-a-3
+ only_in_v4 | urn:mavedb:00001248-b-1
+ only_in_v4 | urn:mavedb:00001248-b-2
+ only_in_v4 | urn:mavedb:00001248-b-3
+ only_in_v4 | urn:mavedb:00001248-c-1
+ only_in_v4 | urn:mavedb:00001248-c-2
+ only_in_v4 | urn:mavedb:00001248-c-3
+ only_in_v4 | urn:mavedb:00001248-d-1
+ only_in_v4 | urn:mavedb:00001248-d-2
+ only_in_v4 | urn:mavedb:00001248-d-3
+ only_in_v4 | urn:mavedb:00001249-a-1
+ only_in_v4 | urn:mavedb:00001249-a-2
+ only_in_v4 | urn:mavedb:00001249-a-3
+ only_in_v4 | urn:mavedb:00001249-a-4
+ only_in_v4 | urn:mavedb:00001250-a-1
+ only_in_v4 | urn:mavedb:00001252-a-1
+ only_in_v4 | urn:mavedb:00001252-a-2
+ only_in_v4 | urn:mavedb:00001253-a-1
+ only_in_v4 | urn:mavedb:00001253-a-2
+ only_in_v4 | urn:mavedb:00001253-a-3
+ only_in_v4 | urn:mavedb:00001253-a-4
+ only_in_v4 | urn:mavedb:00001253-a-5
+ only_in_v4 | urn:mavedb:00001255-a-1
+ only_in_v4 | urn:mavedb:00001255-a-2
+ only_in_v4 | urn:mavedb:00001256-a-12
+ only_in_v4 | urn:mavedb:00001257-0-1
+ only_in_v4 | urn:mavedb:00001257-a-1
+ only_in_v4 | urn:mavedb:00001257-a-2
+ only_in_v4 | urn:mavedb:00001257-a-3
+ only_in_v4 | urn:mavedb:00001257-a-4
+ only_in_v4 | urn:mavedb:00001258-a-1
+ only_in_v4 | urn:mavedb:00001259-a-1
+ only_in_v4 | urn:mavedb:00001260-a-1
+ only_in_v4 | urn:mavedb:00001262-a-1
+ only_in_v4 | urn:mavedb:00001263-a-1
+ only_in_v4 | urn:mavedb:00001264-a-1
+ only_in_v4 | urn:mavedb:00001265-a-1
+(71 rows)
+
+ urn | v3_rows | v4_rows | delta 
+-----+---------+---------+-------
+(0 rows)
+

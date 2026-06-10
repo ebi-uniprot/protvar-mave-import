@@ -26,11 +26,11 @@ SELECT 'v4',
        count(*) FILTER (WHERE uniprot IS NOT NULL)
 FROM mave_identifier_v4;
 
--- 3. Score-set URNs added / removed between v3 and v4
-SELECT 'only_in_v3' AS delta, urn FROM mave_identifier_v3
+-- 3. Score-set URNs added / removed between v3 and v4 (DISTINCT: a set may have >1 target gene)
+SELECT DISTINCT 'only_in_v3' AS delta, urn FROM mave_identifier_v3
   WHERE urn NOT IN (SELECT urn FROM mave_identifier_v4)
-UNION ALL
-SELECT 'only_in_v4', urn FROM mave_identifier_v4
+UNION
+SELECT DISTINCT 'only_in_v4', urn FROM mave_identifier_v4
   WHERE urn NOT IN (SELECT urn FROM mave_identifier_v3)
 ORDER BY delta, urn;
 
