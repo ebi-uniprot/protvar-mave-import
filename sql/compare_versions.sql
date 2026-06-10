@@ -4,11 +4,9 @@
 --
 --   psql -h $PV_DB -p $PV_DBPORT -d $PV_DBNAME -U $PV_DBUSER -f sql/compare_versions.sql
 
--- 1. Row counts: base backup vs v3 vs v4
-SELECT 'mave_identifier' AS tbl, 'base' AS ver, count(*) FROM mave_identifier
-UNION ALL SELECT 'mave_identifier', 'v3', count(*) FROM mave_identifier_v3
+-- 1. Row counts: v3 vs v4
+SELECT 'mave_identifier' AS tbl, 'v3' AS ver, count(*) FROM mave_identifier_v3
 UNION ALL SELECT 'mave_identifier', 'v4', count(*) FROM mave_identifier_v4
-UNION ALL SELECT 'mave_score',      'base', count(*) FROM mave_score
 UNION ALL SELECT 'mave_score',      'v3', count(*) FROM mave_score_v3
 UNION ALL SELECT 'mave_score',      'v4', count(*) FROM mave_score_v4
 ORDER BY tbl, ver;

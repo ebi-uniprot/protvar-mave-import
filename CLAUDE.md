@@ -30,3 +30,8 @@ See [`README.md`](README.md) — the single source for the pipeline, data layout
   apply the identifier offset (`mave_position + uniprotoffset`) — never compare raw positions.
 - **Field selection is manual:** the extracted fields are hard-coded in `extract_meta.py`;
   revisit when a schema diff surfaces new fields.
+- **Versioned tables, no base:** load targets `mave_*_vN`; there is no unsuffixed base table.
+  `check_*.sql` / `compare_versions.sql` name a version directly (edit the `_v3` suffix) — kept
+  un-parameterised on purpose (one-off scripts).
+- **Grants are NOT in this (public) repo:** read grants for downstream roles live in the
+  private `protvar-import-py/mave/mave_tables_grants.sql`, applied manually on prod.

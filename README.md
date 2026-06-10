@@ -73,7 +73,8 @@ v4 renamed `taxonomy.taxId` → `code` (the importer reads either).
 4. **Load → PostgreSQL** — create the tables (`sql/create_tables.sql`) then `\copy` the CSVs
    in; needed for validation and querying. Joined in-DB by URN.
 5. **Validate** — `sql/check_hgvs.sql`; `sql/check_ref_aa.sql` checks parsed `ref_aa` vs the
-   canonical residue, applying the offset (`pos + uniprotoffset`).
+   canonical residue, applying the offset (`pos + uniprotoffset`). Both target the `_v3`
+   tables — edit the suffix to check another version.
 6. **Export** — extract the UniProt-mapped score subset to a CSV for downstream use (see Run).
 
 ## Run
@@ -100,8 +101,8 @@ psql -h $PV_DB -p $PV_DBPORT -d $PV_DBNAME -U $PV_DBUSER -f sql/check_ref_aa.sql
 
 ### Re-run both versions and compare
 
-Loads the full datasets into **version-suffixed** tables (`mave_*_v3`, `mave_*_v4`), leaving
-the existing `mave_identifier` / `mave_score` as a backup, then diffs v3 against v4.
+Loads the full datasets into **version-suffixed** tables (`mave_*_v3`, `mave_*_v4`), then
+diffs v3 against v4.
 Prerequisites: `PV_DB*` set, and `MAVE_DATA` pointing to the dataset root for the version
 you're running (the export dir containing `main.json` and `csv/`). The scripts exit if
 `MAVE_DATA` is unset.
@@ -122,7 +123,7 @@ the run record.
 ```bash
 PGPASSWORD="$PV_DBPASS" psql -h "$PV_DB" -p "$PV_DBPORT" -d "$PV_DBNAME" -U "$PV_DBUSER" -c "\copy (
     SELECT accession AS urn, variant_num, hgvs_nt, hgvs_pro, is_simple_p, score
-    FROM mave_score WHERE accession IN (SELECT urn FROM mave_identifier WHERE uniprot IS NOT NULL)
+    FROM mave_score_v3 WHERE accession IN (SELECT urn FROM mave_identifier_v3 WHERE uniprot IS NOT NULL)
 ) TO 'mave_score_mapped.csv' WITH CSV HEADER;"
 ```
 
