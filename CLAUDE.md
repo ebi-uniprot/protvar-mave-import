@@ -34,4 +34,4 @@ See [`README.md`](README.md) — the single source for the pipeline, data layout
   `check_*.sql` / `compare_versions.sql` name a version directly (edit the `_v3` suffix) — kept
   un-parameterised on purpose (one-off scripts).
 - **Grants are NOT in this (public) repo:** read grants for downstream roles live in the
-  private `protvar-import-py/mave/mave_tables_grants.sql`, applied manually on prod.
+  private `protvar-import-py/sql/mave_tables_grants.sql`, applied manually on prod.
