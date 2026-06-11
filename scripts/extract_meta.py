@@ -109,6 +109,13 @@ def extract_score_set_data(json_path, output_csv, dry_run=False):
                                     # offset is not a valid integer, leave as None
                                     pass
 
+                    # Fallback (v4+): if no UniProt externalIdentifier, use MaveDB's mapped-metadata
+                    # UniProt accession. No offset travels with it, so UniProtOffset stays NULL.
+                    if not row["UniProt"]:
+                        mapped_uniprot = target_gene.get("uniprotIdFromMappedMetadata")
+                        if mapped_uniprot:
+                            row["UniProt"] = mapped_uniprot
+
                     target_sequence = target_gene.get("targetSequence") or {}
                     taxonomy = target_sequence.get("taxonomy") or {}
                     # MaveDB v4 renamed taxonomy.taxId → taxonomy.code; accept either
