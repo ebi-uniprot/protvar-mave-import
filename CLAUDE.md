@@ -9,7 +9,7 @@ data layout, and commands — this file only records decisions an agent shouldn'
   `load.sql`.** psql does NOT interpolate `:`-variables inside `\copy` (only in regular SQL);
   a parameterised `\copy` silently fails — that bug was already hit and fixed. `create_tables.sql`
   (plain SQL) does take `-v idtable=/sctable=`.
-- **`check_*.sql` / `compare_versions.sql` name a version table directly (edit the `_v3`
+- **`check_*.sql` / `compare_versions.sql` name a version table directly (edit the `_vN`
   suffix); kept un-parameterised on purpose** — one-off manual scripts.
 - **No unsuffixed base table** — load targets `mave_*_vN`; base `mave_identifier`/`mave_score`
   were retired.

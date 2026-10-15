@@ -13,18 +13,18 @@
 -- CREATE INDEX rel_2025_01_genomic_protein_mapping_acc_pro_pos_seq_idx
 --     ON rel_2025_01_genomic_protein_mapping (accession, protein_position, protein_seq);
 --
--- Target tables: edit the _v3 suffix below (e.g. _v4) to check another version.
+-- Target tables: edit the _v4 suffix below to check another version.
 
 WITH filtered_mave_id AS (
     SELECT *
-    FROM mave_identifier_v3
+    FROM mave_identifier_v4
     WHERE uniprot IS NOT NULL
       AND genetaxid = 9606
       AND genecategory = 'protein_coding'
 )
    , filtered_mave_score AS (
     SELECT *
-    FROM mave_score_v3
+    FROM mave_score_v4
     WHERE is_simple_p IS TRUE
 )
    , mapping AS (
@@ -52,7 +52,7 @@ WHERE
 
 -- To check the offset distribution before running the full validation:
 -- SELECT uniprotoffset, COUNT(*)
--- FROM mave_identifier_v3
+-- FROM mave_identifier_v4
 -- WHERE uniprot IS NOT NULL AND genetaxid = 9606
 -- GROUP BY uniprotoffset
 -- ORDER BY uniprotoffset;
